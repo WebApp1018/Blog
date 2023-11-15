@@ -1,0 +1,303 @@
+.diagram-outer{
+	width: 100%;
+	position: relative;
+}
+.diagram-item-outer{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 14rem;
+}
+.diagram-item-outer:last-child{
+	margin-bottom: 0;
+}
+.diagram-head{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 26.5rem;
+}
+.diagram-head *{
+	font-size: 1.8rem;
+}
+.diagram-icon{
+	width: 4.8rem;
+}
+.diagram-icon img{
+	max-width: 100%;
+}
+.diagram-head-text{
+	padding-left: 1.6rem;
+}
+.diagram-top,.diagram-center{
+	width: calc(100% - 26.5rem);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+.diagram-top-box{
+	width: calc(50% - 2rem);
+	text-align: center;
+	background: #fff;
+	height: 5rem;
+	padding: 0.5rem 1rem;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+	position: relative;
+	border-right: 0.4rem solid red;
+}
+.diagram-top-box p{
+	color: red;
+}
+.diagram-top-box:after{
+	position: absolute;
+	content: "";
+	left: 0;
+	width: 100%;
+	height: 1px;
+	bottom: -2rem;
+	background: red;
+	opacity: 0.3;
+}
+.diagram-top-box p{
+	margin: 0;
+}
+.diagram-top-arrow{
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: #fff;
+	bottom: -2.5rem;
+	width: 3rem;
+	height: 0.9rem;
+	margin: auto;
+	z-index: 1;
+}
+.diagram-top-arrow span{
+	position: absolute;
+	top: 0;
+  	margin-left: -0.7rem;
+  	border-left: 0.7rem solid transparent;
+  	border-right: 0.7rem solid transparent;
+  	border-top: 0.9rem solid red;
+  	animation: animateTopArrow 2s infinite;
+}
+.diagram-top-arrow span:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.diagram-top-arrow span:nth-child(3) {
+    animation-delay: -0.6s;
+}
+@keyframes animateTopArrow{
+    0% {
+        opacity: 0;
+        transform: translate(0, -2rem);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 2rem);
+    }
+}
+.diagram-center-item{
+	width: 20rem;
+	background: var(--gray3-color);
+	text-align: center;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	position: relative;
+}
+.diagram-center-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+}
+.diagram-center-arrow span {
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--blue2-color);
+    border-right: 3px solid var(--blue2-color);
+    transform: rotate(-45deg);
+    animation: animate 2s infinite;
+    top: 1.4rem;
+    right: -3.9rem;
+}
+.diagram-center-arrow span:nth-child(2){
+	border-bottom-color: var( --blue-color);
+	border-right-color: var(--blue-color);
+	animation-delay: -0.3s;
+}
+.diagram-center-arrow span:nth-child(3){
+	animation-delay: -0.6s;	
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(-1.7rem, -1.7rem);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(1.7rem, 1.7rem);
+    }
+}
+.diagram-center-right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    justify-content: space-between;
+    top: -9.1rem;
+    right: 13.3rem;
+}
+.diagram-center-box{
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--gray3-color);
+	width: 23rem;
+}
+.arrow-list{
+	position: absolute;
+}
+.svg-arrow{
+	position: absolute;
+	width: 50px;
+	height: 65px;
+}
+.svg-arrow polyline{
+	fill: none;
+    stroke: var(--blue-color);
+    vector-effect: non-scaling-stroke;
+    stroke-width: 2;	
+}
+.diagram-info-text polyline{
+	fill: var(--blue-color);
+}
+.svg-arrow path,.diagram-info-text path{
+    fill: none;
+    stroke: var(--blue-color);
+    vector-effect: non-scaling-stroke;
+    stroke-width: 2;
+    stroke-dasharray: 2, 3; 
+}
+.svg-up-right {
+    top: 1.5rem;
+    left: -6.5rem;
+}
+.svg-left-down {
+    right: -6.6rem;
+    top: 1.8rem;
+}
+.svg-down-right{
+	bottom: 0.9rem;
+	right: -6.6rem;
+}
+.svg-left-up {
+    left: -6.5rem;
+    bottom: 1.7rem;
+}
+.ball{
+	fill: var(--blue-color);
+	opacity: 0;
+}
+.ball-1.active{
+	animation: ball-1-animate 3s infinite;
+}
+@keyframes ball-1-animate {
+  	0% {
+        opacity: 1;
+        transform: translate(0, 20px);
+    }
+    50% {
+    	opacity: 1;
+        transform: translate(0, -50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(60px, -50px);
+    }
+}
+.ball-2.active{
+	animation: ball-2-animate 4s infinite;
+}
+@keyframes ball-2-animate {
+  	0% {
+        opacity: 1;
+        transform: translate(-20px, 0);
+    }
+    50% {
+    	opacity: 1;
+        transform: translate(39px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(39px, 80px);
+    }
+}
+.ball-3.active{
+	animation: ball-3-animate 4s infinite;
+}
+@keyframes ball-3-animate {
+  	0% {
+        opacity: 1;
+        transform: translate(0, -20px);
+    }
+    50% {
+    	opacity: 1;
+        transform: translate(0, 43px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-80px, 43px);
+    }
+}
+.ball-4.active{
+	animation: ball-4-animate 4s infinite;
+}
+@keyframes ball-4-animate {
+  	0% {
+        opacity: 1;
+        transform: translate(20px, 0);
+    }
+    50% {
+    	opacity: 1;
+        transform: translate(-39px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-39px, -80px);
+    }
+}
+.diagram-info {
+    position: absolute;
+    right: -400px;
+    top: 24px;
+}
+.diagram-info-text p{
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	margin: 0;
+}
+.diagram-info-svg{
+	position: absolute;
+	left: -4.8rem;
+	width: 4.8rem;
+	top: 0;
+}

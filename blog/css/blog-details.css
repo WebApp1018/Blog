@@ -1,0 +1,59 @@
+.blog-single-date *{
+	font-weight: 500;
+	text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: var(--blue1-color) !important;
+    letter-spacing: 1.5px;
+}
+.blog-single-date a:hover{
+	color: var(--white-color) !important;
+}
+.blog-single-date span{
+	display: block;
+	margin-left: 0.8rem;
+	padding-left: 0.8rem;
+	border-left: 1px solid var(--blue1-color);
+}
+.blog-single-img{
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+}
+.blog-single-img:first-child{
+	margin-top: 0;
+}
+.blog-single-img img{
+	width: 100%;
+}
+.blog-details p{
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+.blog-details p:first-child{
+	margin-top: 0;
+}
+.blog-details p:last-child{
+	margin-bottom: 0;
+}
+.blog-details h1,
+.blog-details h2,
+.blog-details h3,
+.blog-details h4,
+.blog-details h5,
+.blog-details h6{
+	font-size: 1.8rem !important;
+	margin: 2rem 0 !important;
+	line-height: 2.6rem !important;
+	color: var(--black-color) !important;
+	font-weight: bold !important;
+}
+.blog-details ul > li{
+	margin-bottom: 0.45rem;
+	padding-left: 2rem;
+}
+.blog-details ul > li:after{
+	background: var(--black-color);
+    height: 0.6rem;
+    width: 0.6rem;
+    top: 1rem;
+}

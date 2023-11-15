@@ -1,0 +1,104 @@
+.sec-icon .row .row{
+	--bs-gutter-x: 10.5rem;
+}
+.sec-icon .d-flex{
+	margin-top: 5.2rem;
+}
+.sec-icon .d-flex:nth-child(-n + 2){
+	margin-top: 0;
+}
+.icon-block-outer{
+	padding-top: 5.2rem;
+	border-top: 1px solid var(--border-color);
+	position: relative;
+	width: 100%;
+}
+.sec-icon .d-flex:nth-child(-n + 2) .icon-block-outer{
+	padding-top: 0;
+	border-top: 0;
+}
+.icon-block-outer:after{
+	position: absolute;
+	content: "";
+	left: -5.3rem;
+	top: 5.2rem;
+	height: calc(100% - 5.2rem);
+	width: 1px;
+	background: var(--border-color);
+}
+.sec-icon .d-flex:nth-child(2n + 1) .icon-block-outer:after{
+	content: none;
+}
+.sec-icon .d-flex:nth-child(-n + 2) .icon-block-outer:after{
+	top: 0;
+	height: 100%;
+}
+.icon-block{
+	width: 88%;
+	margin: auto;
+}
+.icon-img{
+	width: 6.2rem;
+	height: 6.2rem;
+}
+.icon-img img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.icon-img + .icon-info{
+	width: calc(100% - 6.2rem);
+	padding-left: 3.2rem;
+}
+@media(min-width:1200px) and (max-width:1339.98px){
+	.sec-icon .row .row {
+    	--bs-gutter-x: 4rem;
+	}
+	.icon-block-outer:after {
+    	left: -2rem;
+    }
+}
+@media(min-width:992px) and (max-width:1199.98px){
+    .sec-icon .row .row {
+    	--bs-gutter-x: 4rem;
+	}
+	.icon-block-outer:after {
+    	left: -2rem;
+    }
+}
+@media(min-width:768px) and (max-width:991.98px){
+    .sec-icon .row .row {
+        --bs-gutter-x: 6rem;
+    }
+    .icon-block {
+    	width: 100%;
+    }
+    .icon-block-outer:after {
+    	left: -3.1rem;
+    }
+}
+@media(max-width:767.98px){
+	.sec-icon .d-flex {
+    	margin-top: 0;
+	}
+    .icon-block {
+    	width: 100%;
+    }
+    .icon-block-outer{
+    	border: 0 !important;
+    	border-bottom: 1px solid var(--border-color) !important;
+    	padding: 5.2rem 0 !important;
+    }
+    .sec-icon .d-flex:first-child .icon-block-outer{
+    	padding-top: 0 !important;
+    }
+    .sec-icon .d-flex:last-child .icon-block-outer{
+    	padding-bottom: 0 !important;
+    	border-bottom: 0 !important;
+    }
+    .icon-block-outer:after{
+    	content: none;
+    }
+    .sec-icon .row .row {
+    	--bs-gutter-x: 0;
+	}
+}

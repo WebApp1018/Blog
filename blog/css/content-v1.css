@@ -1,0 +1,20 @@
+.content-v1-info ul{
+	margin-top: 0;
+}
+.content-v1-info ul > li:after {
+    top: 0.7rem;
+}
+.content-v1-info ul ol{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.content-v1-info ul ol li{
+	padding-left: 1.5rem;
+}
+.content-v1-info ul ol li:before{
+	content: "";
+	height: 0.2rem;
+	width: 0.8rem;
+	top: 1.1rem;
+	background: var(--black-color);
+}

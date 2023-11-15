@@ -1,0 +1,78 @@
+:root{
+	--black-color : #071c2c;
+	--white-color : #fff;
+	--blue-color : #1f64f6;
+	--blue1-color : #4082ff;
+	--blue2-color : #0a304d;
+	--steel-blue-color : #b9cee1;
+	--gray1-color : #939393;
+	--gray2-color : #d3d2d4;
+	--gray3-color : #f5f5f5;
+	--gray4-color : #fafafa;
+	--border-color : rgba(211,210,212,0.74);
+
+	/*---- link blue css start here ----*/
+	--link-color : #1f64f6;
+	--link-hover-color : #084a9b;
+	/*---- link blue css start here ----*/
+
+	/*---- button blue css start here ----*/
+	--btn-blue-color : #1f64f6;
+	--btn-blue-text-color : #fff;
+	--bnt-blue-hover-color : #084a9b;
+	--btn-blue-text-hover-color : #fff;
+	/*---- button blue css end here ----*/
+
+	/*---- input css end here ----*/
+	--input-border-color : #a3a2a0;
+	--input-bg-color : #f5f8fa;
+	--input-color : #33475b;
+	--input-focus-border-color : rgba(82,168,236,.8);
+	--input-placehoder-color : rgba(0,0,0,0.4);
+	--input-error-border-color : #c87872;
+	--input-error-message-color : #f2545b;
+	--checkbox-border : #a3a2a0;
+	--checkbox-active-border : #1f64f6;
+	--checkbox-tick-color : #1f64f6;
+	/*---- input css end here ----*/
+
+	/*---- Hero banner overlay color css start here ----*/
+	--hero-overlay-color : rgba(255,255,255,0.5);
+	/*---- Hero banner overlay color css end here ----*/
+
+	/*---- footer color css start here ----*/
+	--footer-bg : #0a304d;
+	--footer-text-color : #fff;
+	--footer-border-color : rgba(255,255,255,0.3);
+	/*---- footer color css end here ----*/
+
+	/*---- cookie color css end here ----*/
+	--cookie-bg : #fff;
+	--cookie-border : #cbd6e2;
+	--cookie-color : #33475b;
+	--cookie-close-color : #8b8589;
+	--cookie-link-color : #0091ae;
+	/*---- cookie color css start here ----*/
+
+	/*---- Risk color css start here ----*/
+	--risk-bg-01 : #ececee;
+	--risk-01-number-color : #071c2c;
+	--risk-01-heading-color : #071c2c;
+	--risk-01-text-color : #071c2c;
+
+	--risk-bg-02 : #dfe1ed;
+	--risk-02-number-color : #071c2c;
+	--risk-02-heading-color : #071c2c;
+	--risk-02-text-color : #071c2c;
+
+	--risk-bg-03 : #cdeae8;
+	--risk-03-number-color : #071c2c;
+	--risk-03-heading-color : #071c2c;
+	--risk-03-text-color : #071c2c;
+
+	--risk-bg-04 : #fef4d1;
+	--risk-04-number-color : #071c2c;
+	--risk-04-heading-color : #071c2c;
+	--risk-04-text-color : #071c2c;
+	/*---- Risk color css end here ----*/
+}	

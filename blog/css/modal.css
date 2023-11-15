@@ -1,0 +1,222 @@
+.modal-backdrop {
+    z-index: 99999;
+}
+.modal {
+    z-index: 999999;
+}
+.modal-content {
+    border-radius: 2px;
+}
+.modal-dialog {
+    width: 100%;
+    max-width: 75rem;
+}
+.modal-dialog-big{
+    max-width: 100rem;
+}
+.modal-header {
+    padding: 1.5rem;
+}
+.modal-header .body-medium{
+    font-size: 2.8rem !important;
+}
+.btn-close{
+    box-shadow: none !important;
+    outline: none !important;
+}
+.form-group-default {
+    background-color: #fff;
+    position: relative;
+    border: 1px solid rgba(33, 33, 33, 0.14);
+    border-top-color: rgba(8, 7, 7, 0.14);
+    border-radius: 2px;
+    padding-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 4px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    cursor: text;
+}
+.form-group-default label {
+    margin: 0;
+    display: block;
+    opacity: 1;
+    cursor: text;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.form-group-default label.fade {
+    opacity: 0.5;
+    font-size: 12px;
+}
+.form-group-default .form-control {
+    border: none !important;
+    height: 2.5rem;
+    min-height: 2.5rem;
+    padding: 0;
+    margin-top: -4px;
+    font-size: 1.4rem;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+.form-group-default .form-control::placeholder {
+    opacity: 0.77;
+}
+.form-group-default .form-control:-ms-input-placeholder {
+    opacity: 0.77;
+}
+.form-group-default .form-control::-ms-input-placeholder {
+    opacity: 0.77;
+}
+.form-group-default.input-group .form-input-group {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+.form-group-default .input-group-append {
+    display: flex;
+}
+.input-group-text {
+    background-color: #fff;
+    color: rgba(75, 75, 75, 0.67);
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+    min-width: 5rem;
+    border: 0;
+}
+.form-group-default .input-group-append .input-group-text:before {
+    content: "";
+    width: 1px;
+    height: 80%;
+    top: 0px;
+    left: -10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.16);
+}
+.form-check {
+    font-size: 1.4rem;
+}
+.modal-body {
+    padding: 0;
+}
+.modal-footer {
+    padding: 1.5rem;
+}
+.form-check-input {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: 0.4rem;
+    box-shadow: none !important;
+}
+.form-check-label a:hover{
+    text-decoration: underline !important;
+}
+.modal-right {
+    width: 100%;
+}
+.modal-title-outer{
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding: 2rem 4rem 2rem 2rem;
+}
+.modal-title-outer span {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+.modal-title{
+    margin-bottom: 1rem;
+}
+.modal-title-outer p:last-child{
+    margin-bottom: 0;
+}
+.modal-title-outer p a:hover{
+    text-decoration: underline !important;
+}
+.modal-title-outer .btn-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2;
+}
+.modal-form{
+    padding: 2rem;
+}
+.modal-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+.modal-btn .btn + .btn{
+    margin-left: 1.6rem;
+}
+.modal-info {
+    width: 100%;
+    border-right: 1px solid var(--border-color);
+    padding: 2rem;
+}
+.modal-info p{
+    margin-bottom: 2rem;
+}
+.modal-message{
+    padding: 4.8rem 6.4rem;
+    text-align: center;
+}
+@media(min-width:768px) and (max-width:991.98px){
+    .modal-title-outer p,
+    .modal-info p{
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin-bottom: 1.4rem;
+    }
+    .modal-outer {
+        position: relative;
+    }
+    .modal-title-outer {
+        position: initial;
+        padding: 2rem;
+    }
+    .modal-message {
+        padding: 3.2rem 5.4rem;
+    }
+}
+@media(max-width:767.98px){
+    .modal-dialog {
+        max-width: 97%;
+    }
+    .input-group-append {
+        display: none !important;
+    }
+    .modal-title-outer p,
+    .modal-info p{
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin-bottom: 1.4rem;
+    }
+    .modal-outer {
+        position: relative;
+    }
+    .modal-title-outer {
+        position: initial;
+        padding: 2rem;
+    }
+    .modal-message {
+        padding: 2.8rem 1.4rem;
+    }
+}
