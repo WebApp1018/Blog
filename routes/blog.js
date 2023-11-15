@@ -12,7 +12,7 @@ router.get("/test", (req, res) => res.status(200).json({ msg: "Blog Works!" }));
 //@access   Public
 router.get("/", async function (req, res, next) {
   try {
-    res.json(await blog.getMultiple(req.body.page));
+    res.json(await blog.getMultiple(req.query.page));
   } catch (err) {
     console.error(`Error while getting blogs `, err.message);
     next(err);
