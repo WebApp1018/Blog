@@ -9,7 +9,7 @@ const config = {
     password: env.DB_PASSWORD || "6ymOoXsRPCExCtnQBrHXpILD4Rdiy0rn",
     database: env.DB_NAME || "bgqghviq",
   },
-  listPerPage: env.LIST_PER_PAGE || 12,
+  listPerPage: env.LIST_PER_PAGE || 4,
 };
 
 module.exports = config;

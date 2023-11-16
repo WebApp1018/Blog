@@ -25,7 +25,17 @@ async function getNum() {
   };
 }
 
+async function getBlogDetail(id) {
+  const rows = await db.query("SELECT * FROM quote Where id = " + id);
+
+  const data = rows[0];
+  return {
+    data,
+  };
+}
+
 module.exports = {
   getMultiple,
   getNum,
+  getBlogDetail,
 };

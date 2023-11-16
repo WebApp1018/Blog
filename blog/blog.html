@@ -1103,9 +1103,7 @@
     <!-- blog list section start here -->
     <section class="sec-blog pt-64 pb-64">
       <div class="container">
-        <div id="blog-list" class="row">
-          
-        </div>
+        <div id="blog-list" class="row"></div>
         <div class="pagination-list mt-64 wow fadeInUp">
           <ul id="page"></ul>
         </div>
@@ -1593,7 +1591,7 @@
     <script src="js/newsletter.js"></script>
 
     <script>
-      var num_per_page = 12;
+      var num_per_page = 4;
       var blog_num = 0;
       var current_page = 1;
 
@@ -1605,57 +1603,73 @@
       function getBlogNum() {
         $.ajax({
           url: "http://localhost:5000/blog/get_num",
-					type: "GET",
-					dataType: "json",
+          type: "GET",
+          dataType: "json",
           success: function (result) {
             blog_num = result.num;
-            console.log(blog_num);
+            page_text =
+              '<li class="pagination-btn"><a onclick="clickPreview()">Previous</a></li>';
 
-            page_text = '<li class="pagination-btn"><a href="#">Previous</a></li>';
+            const numPerPage = 5; // Number of buttons per set
 
-            for (let i = 0; i < blog_num/num_per_page; i++) {
-              page_text += '<li class="'
-              page_text += current_page == (i+1)?'active':'';
-              page_text += '"><a onclick="getBlogList('+(i+1)+')">'+(i+1)+'</a></li>';
+            // Calculate start and end index for pagination
+            let start = Math.max(current_page - Math.floor(numPerPage / 2), 1);
+            let end = Math.min(start + numPerPage - 1, Math.ceil(blog_num / num_per_page));
+
+            // Adjust start and end index if needed to display numPerPage buttons
+            if (end - start + 1 < numPerPage) {
+              start = Math.max(end - numPerPage + 1, 1);
             }
 
-            page_text += '<li class="pagination-btn"><a href="#">Next</a></li>'
-            
-            $("#page").html(page_text)
+            for (let i = start; i <= end; i++) {
+              page_text += `<li class="${current_page === i ? "active" : ""}">
+                  <a onclick="clickPage(${i},$(this))">${i}</a></li>`;
+            }
+
+            page_text +=
+              '<li class="pagination-btn"><a onclick="clickNext()">Next</a></li>';
+
+            $("#page").html(page_text);
           },
-					error: function (err) {
-            console.log("err")
+          error: function (err) {
+            console.log("err");
           },
         });
       }
 
-      function getBlogList(page) {
+      function clickPage(page, obj) {
         current_page = page;
+        $(".active").removeClass("active");
+        obj.parent().addClass("active");
+        getBlogList(current_page);
+      }
 
+      function clickPreview() {}
+
+      function getBlogList(page) {
         $.ajax({
           url: "http://localhost:5000/blog/",
-					type: "GET",
-					dataType: "json",
-					data:{
-						page
-					},
+          type: "GET",
+          dataType: "json",
+          data: {
+            page,
+          },
           success: function (result) {
-            console.log(result.data)
+            console.log(result.data);
             blog_text = "";
 
-            for(i in result.data){
-              blog_text += '<div class="col-md-6 col-lg-3 d-flex"><a href="#" class="blog-item blog-v1-item wow fadeInUp"><div class="blog-img"><img src="images/blog-img-01.png" alt="" /></div><div class="blog-info"><div class="blog-date d-align mb-16"><span>TRM Talks</span><span>Jul 14, 2023</span></div><div class="blog-title text-black"><h3>TRM Talks: Lazarus Heist Lazarus Heist Lazarus Heist LazarusHeist</h3></div><div class="short-desc text-black"><p>In April 2023, the US Department of the Treasury publishedits Illicit Finance Risk Assessment of Decentralized Finance.</p></div></div></a></div>';
+            for (i in result.data) {
+              blog_text +=
+                '<div class="col-md-6 col-lg-3 d-flex"><a href="http://localhost:5000/blog/'+result.data[i].id+'" class="blog-item blog-v1-item wow fadeInUp"><div class="blog-img"><img src="images/blog-img-01.png" alt="" /></div><div class="blog-info"><div class="blog-date d-align mb-16"><span>TRM Talks</span><span>Jul 14, 2023</span></div><div class="blog-title text-black"><h3>'+result.data[i].quote+'</h3></div><div class="short-desc text-black"><p>In April 2023, the US Department of the Treasury publishedits Illicit Finance Risk Assessment of Decentralized Finance.</p></div></div></a></div>';
             }
 
             $("#blog-list").html(blog_text);
-            
           },
-					error: function (err) {
-            console.log("err")
+          error: function (err) {
+            console.log("err");
           },
         });
       }
-
     </script>
   </body>
 </html>
